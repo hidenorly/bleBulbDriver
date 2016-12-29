@@ -32,7 +32,7 @@ end
 
 def getSupportedBLEDevices
 	result = []
-	exec_cmd = "hcitool lescan"
+	exec_cmd = "stdbuf -oL -eL hcitool lescan"
 
 	pio = nil
 	begin
