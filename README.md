@@ -6,7 +6,7 @@ BLE (Bluetooth LE) bulb controller such as SATECHI BLE LED Bulb.
 
 ```
 ./bleBulbDriver.rb
-Usage: listDevices|on|off|allOn|allOff
+Usage: listDevices|on|off|allOn|allOff|toggle|toggle|allToggle
 bleBulbDriver Copyright 2016 hidenorly
     -b, --target=                    Set target device's mac address
     -t, --type=                      Set device type (default:SATECHILED)
@@ -25,4 +25,9 @@ $ sudo ./bleBulbDriver.rb alloff
 ```
 $ ./bleBulbDriver.rb on -b D0:5F:B8:XX:XX:XX
 $ ./bleBulbDriver.rb off -b D0:5F:B8:XX:XX:XX
+```
+
+```
+$ ./bleBulbDriver.rb -b D0:5F:B8:XX:XX:XX toggle
+$ ./bleBulbDriver.rb alltoggle
 ```
