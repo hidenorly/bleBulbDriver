@@ -56,7 +56,7 @@ def getSupportedBLEDevices
 	rescue Timeout::Error => ex
 		if pio then
 			if pio.pid then
-				puts pio.pid
+				Process.detach(pio.pid)
 				Process.kill(9, pio.pid)
 			end
 			pio.close
